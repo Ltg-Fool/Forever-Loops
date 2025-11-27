@@ -1,15 +1,15 @@
 @echo off
 if "%1"=="-n" (
     live-server --port=8000 --cors --no-browser build/
-) else if "%1"=="-s" (
+) else if "%1"=="-q" (
     live-server --port=8000 --cors --quiet build/
-) else if "%1"=="-st" (
+) else if "%1"=="-r" (
     if "%2"=="-n" (
-        live-server --port=8000 --cors --no-browser build/standalone/
-    ) else if "%2"=="-s" (
-        live-server --port=8000 --cors --quiet build/standalone/
+        live-server --port=8000 --cors --no-browser
+    ) else if "%2"=="-q" (
+        live-server --port=8000 --cors --quiet
     ) else (
-        live-server --port=8000 --cors build/standalone/
+        live-server --port=8000 --cors
     )
 ) else (
     live-server --port=8000 --cors build/
