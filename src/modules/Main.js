@@ -1,4 +1,4 @@
-class Main {
+export class Main {
     constructor() {
         this.runtimeExt = vm.runtime.ext_jgRuntime;
     }
