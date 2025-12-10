@@ -3,3 +3,5 @@ import { Main } from "./modules/Main.js";
 
 const xmlparser = new XMLParser();
 const main = new Main();
+
+main.checkifworks();

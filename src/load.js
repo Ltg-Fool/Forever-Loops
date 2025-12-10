@@ -10,7 +10,7 @@ elements.forEach(el => el.remove());
 const LOADINGSCRIPT = document.createElement("script");
 vm.runtime.variables['SCRIPTS_LOADED'] = [];
 
-LOADINGSCRIPT.type = 'module';
+//LOADINGSCRIPT.type = 'module';
 LOADINGSCRIPT.id = "LOADSCR"
 LOADINGSCRIPT.src = vm._ap + "src/init.js";
 LOADINGSCRIPT.onload = () => {

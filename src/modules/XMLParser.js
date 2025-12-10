@@ -6,4 +6,7 @@ export class XMLParser {
     parseXML(xml) {
         this.parser.parseFromString(xml, 'text/xml');
     }
+    checkifworks() {
+        console.log("XMLParser module works")
+    }
 }

@@ -1,0 +1,2 @@
+i'l explain how to start a local server for assets in the discord soon
+IT WILL BE IMPORTANT BECAUSE SCRIPTS ARE LOADED FROM THERE
