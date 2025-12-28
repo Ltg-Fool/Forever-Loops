@@ -1,27 +1,33 @@
 export class Main {
-    constructor() {
-        this.runtimeExt = vm.runtime.ext_jgRuntime;
+    constructor(vm) {
+        this.vm = vm;
     }
     checkifworks() {
         console.log("Main module works");
+        console.log(this.vm);
+        console.log(vm);
+        console.log(Scratch.vm);
     }
     getFPS() {
-        this.runtimeExt.getFrameRate();
+        return vm.runtime.ext_jgRuntime.getFrameRate();
     }
     setStageSize(w, h) {
-        this.runtimeExt.setStageSize({WIDTH: w, HEIGHT: h})
+        vm.runtime.ext_jgRuntime.setStageSize({WIDTH: w, HEIGHT: h})
     }
     setMaxFPS(f) {
-        this.runtimeExt.setMaxFrameRate({FRAMERATE: f});
+        this.vm.runtime.ext_jgRuntime.setMaxFrameRate({FRAMERATE: f});
     }
     getMaxFPS() {
-        this.runtimeExt.getMaxFrameRate();
+        this.vm.runtime.ext_jgRuntime.getMaxFrameRate();
     }
     setRuntimeVar(VAR, val){
-        vm.runtime.variables[VAR] = val; 
+        this.vm.runtime.variables[VAR] = val; 
     }
     getRuntimeVar(VAR){
-        vm.runtime.variables[VAR];
+        return this.vm.runtime.variables[VAR];
+    }
+    pathify(p) {
+        return this.vm._ap + p;
     }
 }
 
