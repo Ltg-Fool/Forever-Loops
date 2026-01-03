@@ -1,3 +1,5 @@
+// IGNORE THIS, THIS WAS JUST FO
+
 //Create a stage by getting a reference to the canvas
 stage = new createjs.Stage("GAMESTAGE");
 //Create a Shape DisplayObject.
